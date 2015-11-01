@@ -219,7 +219,7 @@ function makeSlider(a) {
                 })
             }
             d = '<div class="slider-rotator-nav"' + (c.showNav === false ? ' style="display:none;"' : "") + ">";
-            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer"><a href="#prev">' + '<span class="vt-prev fa fa-chevron-left"></span>' + "</a></span>" : "";
+            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer r-a-prev"><a href="#prev">' + '<span class="vt-prev fa fa-chevron-left"></span>' + "</a></span>" : "";
             if (c.showNav === true || c.showNav == "number") {
                 d += '<span class="rotator-num">';
                 for (var g = 0; g < c.numPost; g++) {
@@ -227,7 +227,7 @@ function makeSlider(a) {
                 }
                 d += "</span>"
             }
-            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer"><a href="#next">' + '<span class="vt-next fa fa-chevron-right"></span>' + "</a></span>" : "";
+            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer r-a-next"><a href="#next">' + '<span class="vt-next fa fa-chevron-right"></span>' + "</a></span>" : "";
             d += "</div>";
             $("#" + c.containerId).html(h).after(d);
             c.onInit();
