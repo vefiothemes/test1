@@ -219,7 +219,7 @@ function makeSlider(a) {
                 })
             }
             d = '<div class="slider-rotator-nav"' + (c.showNav === false ? ' style="display:none;"' : "") + ">";
-            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer"><a href="#prev">' + "<span></span>" + "</a></span>" : "";
+            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer"><a href="#prev">' + '<span id="vt-prev"></span>' + "</a></span>" : "";
             if (c.showNav === true || c.showNav == "number") {
                 d += '<span class="rotator-num">';
                 for (var g = 0; g < c.numPost; g++) {
@@ -227,7 +227,7 @@ function makeSlider(a) {
                 }
                 d += "</span>"
             }
-            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer"><a href="#next">' + "<span></span>" + "</a></span>" : "";
+            d += (c.showNav === true || c.showNav == "next/prev") ? '<span class="rotator-advancer"><a href="#next">' + '<span id="vt-next"></span>' + "</a></span>" : "";
             d += "</div>";
             $("#" + c.containerId).html(h).after(d);
             c.onInit();
